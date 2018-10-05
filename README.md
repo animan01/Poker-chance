@@ -12,7 +12,8 @@ If customer selected card is drafted website should display popup with a message
 ## How to run
 
 * `$ composer install`
+* build style and js `$ yarn encore dev`
 * `$ php bin/console server:run`
 * open in browser http://127.0.0.1:8000/
 * run test `$ phpunit`
-* build style and js `$ yarn encore dev`
+
