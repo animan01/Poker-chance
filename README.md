@@ -1,10 +1,10 @@
 ## Poker chance calculator
 
-Step 1. User should select a suit and a card rank.
+1. User should select a suit and a card rank.
 
-Step 2. User starts drafting cards, one by one.
+2. User starts drafting cards, one by one.
 
-Step 3. Website should display a chance of getting customer selected card on the next Draft.
+3. Website should display a chance of getting customer selected card on the next Draft.
 If customer selected card is drafted website should display popup with a message "Got it, the chance was
 (current chance of getting the card)%" and reset to step 1.
 
