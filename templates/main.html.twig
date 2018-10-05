@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="first-step">
+        <form method="post" action="{{ url('start') }}" name="form1">
+            <div class="suit">
+                <span>Suit: </span>
+                <span>
+                    <select name="suit">
+                        {% for suit in suits %}
+                            <option value="{{ suit }}">{{ suit }}</option>
+                        {% endfor %}
+                    </select>
+                </span>
+            </div>
+            <div class="rank">
+                <span>Rank: </span>
+                <span>
+                    <select name="rank">
+                        {% for rank in ranks %}
+                            <option value="{{ rank }}">{{ rank }}</option>
+                        {% endfor %}
+                    </select>
+                </span>
+            </div>
+            <div>
+                <span><input type="submit" value="Select a card" name="submit" /></span>
+            </div>
+        </form>
+    </div>
+{% endblock %}

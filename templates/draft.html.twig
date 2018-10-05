@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if data.win == 1 %}
+        <div class="winner">
+            <div class="winner-text">
+                Got it, the chance was (%{{ data.chance }})
+            </div>
+
+            <div>
+                <form action="{{ url('reset') }}" method="post">
+                    <input type="submit" value="Reset to Step 1" name="submit" />
+                </form>
+            </div>
+        </div>
+    {% else %}
+        <div class="chance">
+            <div>Your card is: {{ data.card }}</div>
+            <div>Selected card: {{ data.selectedCard }}</div>
+            <div>
+                <form action="{{ url('draft') }}" method="post">
+                    <input type="submit" value="Draft" name="submit" /> (Chance %{{ data.chance }})
+                </form>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
